@@ -38,8 +38,8 @@ export class PricingPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    Array.from(document.querySelectorAll('.btn.btn-lg.btn-block.btn-outline-primary'))
-        .forEach((e, i) => i ? (e.classList.add('btn-primary'), e.classList.remove('btn-outline-primary')) : 0);
+    Array.from(document.querySelectorAll('.card-deck .card .card-body button.btn.btn-lg.btn-block.btn-outline-primary'))
+        .forEach((e, i) => !i || (e.classList.replace('btn-outline-primary', 'btn-primary')));
   }
 
 }
